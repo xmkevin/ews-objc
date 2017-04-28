@@ -10,6 +10,9 @@
 		33968C1F1EB33615002B3861 /* EWSObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33968C151EB33614002B3861 /* EWSObjc.framework */; };
 		33968C241EB33615002B3861 /* EWSObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33968C231EB33615002B3861 /* EWSObjcTests.m */; };
 		33968C261EB33615002B3861 /* EWSObjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 33968C181EB33614002B3861 /* EWSObjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33968C311EB341AA002B3861 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33968C301EB341AA002B3861 /* AFNetworking.framework */; };
+		33968C351EB34678002B3861 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 33968C331EB34678002B3861 /* ONOXMLDocument.h */; };
+		33968C361EB34678002B3861 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 33968C341EB34678002B3861 /* ONOXMLDocument.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		33968C1E1EB33615002B3861 /* EWSObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWSObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33968C231EB33615002B3861 /* EWSObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWSObjcTests.m; sourceTree = "<group>"; };
 		33968C251EB33615002B3861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33968C301EB341AA002B3861 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		33968C331EB34678002B3861 /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Ono/ONOXMLDocument.h; sourceTree = "<group>"; };
+		33968C341EB34678002B3861 /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Ono/ONOXMLDocument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33968C311EB341AA002B3861 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +60,11 @@
 		33968C0B1EB33614002B3861 = {
 			isa = PBXGroup;
 			children = (
+				33968C321EB3461E002B3861 /* Ono */,
 				33968C171EB33614002B3861 /* EWSObjc */,
 				33968C221EB33615002B3861 /* EWSObjcTests */,
 				33968C161EB33614002B3861 /* Products */,
+				33968C2F1EB341A9002B3861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +95,23 @@
 			path = EWSObjcTests;
 			sourceTree = "<group>";
 		};
+		33968C2F1EB341A9002B3861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33968C301EB341AA002B3861 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33968C321EB3461E002B3861 /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				33968C331EB34678002B3861 /* ONOXMLDocument.h */,
+				33968C341EB34678002B3861 /* ONOXMLDocument.m */,
+			);
+			name = Ono;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,6 +119,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33968C351EB34678002B3861 /* ONOXMLDocument.h in Headers */,
 				33968C261EB33615002B3861 /* EWSObjc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33968C361EB34678002B3861 /* ONOXMLDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +349,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EWSObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -338,6 +370,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EWSObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
