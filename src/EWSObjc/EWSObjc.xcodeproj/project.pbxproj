@@ -13,6 +13,7 @@
 		33968C311EB341AA002B3861 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33968C301EB341AA002B3861 /* AFNetworking.framework */; };
 		33968C351EB34678002B3861 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 33968C331EB34678002B3861 /* ONOXMLDocument.h */; };
 		33968C361EB34678002B3861 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 33968C341EB34678002B3861 /* ONOXMLDocument.m */; };
+		33968C391EB34AF0002B3861 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33968C371EB34ACE002B3861 /* libxml2.2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		33968C301EB341AA002B3861 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 		33968C331EB34678002B3861 /* ONOXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Ono/ONOXMLDocument.h; sourceTree = "<group>"; };
 		33968C341EB34678002B3861 /* ONOXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Ono/ONOXMLDocument.m; sourceTree = "<group>"; };
+		33968C371EB34ACE002B3861 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33968C391EB34AF0002B3861 /* libxml2.2.tbd in Frameworks */,
 				33968C311EB341AA002B3861 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +101,7 @@
 		33968C2F1EB341A9002B3861 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33968C371EB34ACE002B3861 /* libxml2.2.tbd */,
 				33968C301EB341AA002B3861 /* AFNetworking.framework */,
 			);
 			name = Frameworks;
@@ -353,6 +357,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = EWSObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +379,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = EWSObjc/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
